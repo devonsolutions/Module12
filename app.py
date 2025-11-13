@@ -4,8 +4,7 @@ from greeting import get_greeting #Import from your module
 
 app = Flask(__name__)
 
-@app.route('/greeting/<name>')
-# URL: http://127.0.0.1:5000/greeting/YourName
+@app.route('/greeting/<name>') # URL: http://127.0.0.1:5000/greeting/YourName
 def greeting(name):
     message = get_greeting(name)
     current_date = datetime.now().strftime("%Y-%m-%d")
